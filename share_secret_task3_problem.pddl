@@ -1,0 +1,21 @@
+(define (problem task3)
+   (:domain secrets)
+   (:objects a1 a2 a3 a4 a5 a6 - agent s1 s2 - secret)
+   (:init 
+      (knowSecret a1 s1)
+      (knowSecret a2 s2)
+      (connect a1 a2)
+      (connect a1 a3)
+      (connect a2 a4)
+      (connect a3 a5)
+      (connect a3 a6)
+      (connect a4 a5)
+      (connect a5 a3)
+   )
+   (:goal 
+      (and 
+         (knowSecret a5 s1) 
+         (knowSecret a6 s2)
+      )
+   )
+)
